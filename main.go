@@ -63,10 +63,7 @@ func main() {
 	}
 
 	randImage := rand.IntN(len(images))
-	fmt.Printf("random number %d\n", randImage)
-	fmt.Printf("images %#v with len %d\n", images, len(images))
 	image := images[randImage].Name()
-	fmt.Printf("image chosen %s\n", image)
 	err = setImage(image, configPath)
 	if err != nil {
 		fmt.Printf("Failed to set image %s: %s\n", image, err)
